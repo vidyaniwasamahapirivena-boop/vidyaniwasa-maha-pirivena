@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="කෑ/විද්‍යානිවාස මහ පිරිවෙන - දික්කොහුපිටිය, හෙට්ටිමුල්ල, ඇකිරියගල">
+  <meta name="description" content="කෑ/විද්‍යානිවාස මහ පිරිවෙන - ඇකිරියගල, දික්කොහුපිටිය, හෙට්ටිමුල්ල">
   <title>කෑ/විද්‍යානිවාස මහ පිරිවෙන</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;500;600;700;800&display=swap');
     :root { --maroon:#6d1717; --maroon-dark:#3c1010; --gold:#c99132; --gold-light:#f4dca6; --ink:#322821; --muted:#71645a; --paper:#fffdfa; --cream:#fbf6ed; --line:#e9ddca; --shadow:0 16px 38px rgba(71, 39, 15, .10); }
     * { box-sizing:border-box; margin:0; padding:0; }
     html { scroll-behavior:smooth; }
-    body { background:var(--paper); color:var(--ink); font-family:"Noto Sans Sinhala", "Iskoola Pota", "Malithi Web", Arial, sans-serif; line-height:1.75; }
+    body { background:var(--paper); color:var(--ink); font-family:"Noto Sans Sinhala", Manrope, "Iskoola Pota", "Malithi Web", Arial, sans-serif; line-height:1.75; }
     header { background:rgba(255,253,250,.96); border-bottom:1px solid var(--line); box-shadow:0 5px 22px rgba(68,37,16,.08); position:sticky; top:0; z-index:10; }
     .header-inner { align-items:center; display:flex; gap:22px; justify-content:space-between; margin:auto; max-width:1280px; padding:11px 28px; }
     .brand { align-items:center; display:flex; flex-shrink:0; gap:13px; }
@@ -20,16 +21,22 @@
     nav { display:flex; flex-wrap:wrap; gap:2px; justify-content:flex-end; }
     nav a { border-radius:6px; color:#4d3d31; font-size:13px; padding:6px 9px; text-decoration:none; transition:.2s ease; }
     nav a:hover { background:#f6ecdc; color:var(--maroon); }
+    nav a.menu-home, nav a.menu-about, nav a.menu-education, nav a.menu-principal, nav a.menu-teachers, nav a.menu-notices, nav a.menu-gallery, nav a.menu-downloads, nav a.menu-contact { background:#fff; border:1px solid #e4d4bc; box-shadow:0 2px 7px rgba(68,46,25,.10); color:var(--maroon); font-weight:700; }
+    nav a.menu-home:hover, nav a.menu-about:hover, nav a.menu-education:hover, nav a.menu-principal:hover, nav a.menu-teachers:hover, nav a.menu-notices:hover, nav a.menu-gallery:hover, nav a.menu-downloads:hover, nav a.menu-contact:hover { background:#f8eedc; border-color:var(--gold); color:var(--maroon); transform:translateY(-1px); }
     .language-switcher { background:#f8f0e3; border:1px solid #e7d8bd; border-radius:999px; display:flex; padding:3px; }
     .language-switcher button { background:transparent; border:0; border-radius:999px; color:#664d37; cursor:pointer; font:inherit; font-size:12px; padding:4px 11px; }
     .language-switcher button.active { background:var(--maroon); color:#fff; font-weight:700; }
-    .hero { align-items:center; background:linear-gradient(120deg, rgba(58,12,12,.78), rgba(110,23,23,.67)), url("images/hero-banner.png") center/cover no-repeat; color:#fff; display:flex; isolation:isolate; justify-content:center; min-height:560px; overflow:hidden; padding:80px 24px; position:relative; text-align:center; }
+    .hero { align-items:center; background:linear-gradient(90deg, rgba(48,8,8,.9), rgba(103,21,19,.58)), url("images/hero-banner.png") center/cover no-repeat; color:#fff; display:flex; isolation:isolate; justify-content:center; min-height:620px; overflow:hidden; padding:96px 24px; position:relative; text-align:center; }
     .hero::before, .hero::after { border:1px solid rgba(244,220,166,.25); border-radius:50%; content:""; pointer-events:none; position:absolute; z-index:-1; }
     .hero::before { height:560px; right:-170px; top:-220px; width:560px; }
     .hero::after { bottom:-310px; height:520px; left:-180px; width:520px; }
     .hero-content { max-width:920px; }
+    .hero-kicker { color:#fff; font-size:clamp(25px, 4vw, 42px); font-weight:800; letter-spacing:.01em; line-height:1.35; margin:0 auto 24px; max-width:880px; text-shadow:0 3px 14px rgba(0,0,0,.45); }
+    .hero-year-badge { align-items:center; background:rgba(88,20,20,.92); border:3px solid var(--gold-light); border-radius:50%; box-shadow:0 7px 18px rgba(0,0,0,.28); display:flex; flex-direction:column; height:88px; justify-content:center; margin:-14px auto 18px; width:88px; }
+    .hero-year-badge span { color:#ffe8ad; font-size:12px; font-weight:700; letter-spacing:.04em; }
+    .hero-year-badge strong { color:#fff; font-size:24px; line-height:1.2; }
     .hero-logo { background:#fffdf8; border:8px solid rgba(244,220,166,.88); border-radius:50%; box-shadow:0 14px 35px rgba(0,0,0,.28); height:138px; margin-bottom:23px; object-fit:contain; padding:5px; width:138px; }
-    .hero h2 { font-size:clamp(32px, 5vw, 50px); letter-spacing:.01em; line-height:1.35; margin-bottom:14px; text-shadow:0 2px 8px rgba(0,0,0,.18); }
+    .hero h2 { color:#f7d785; font-size:clamp(32px, 5vw, 50px); letter-spacing:.01em; line-height:1.35; margin-bottom:14px; text-shadow:0 3px 12px rgba(0,0,0,.45); }
     .hero-tagline { color:#fff6df; font-size:clamp(17px, 2.1vw, 21px); margin:0 auto 24px; max-width:780px; }
     .hero-button, .download-button { background:var(--gold-light); border-radius:7px; color:var(--maroon-dark); display:inline-block; font-weight:700; letter-spacing:.01em; margin-top:0; padding:11px 25px; text-decoration:none; transition:.2s ease; }
     .hero-button:hover { background:#fff; box-shadow:0 8px 22px rgba(0,0,0,.2); transform:translateY(-2px); }
@@ -40,6 +47,11 @@
     .about-box, .card, .teacher-card, .download-card, .contact-card { background:#fff; border:1px solid var(--line); box-shadow:var(--shadow); }
     .about-box { border-left:4px solid var(--gold); border-radius:4px 18px 18px 4px; padding:34px 38px; }
     .about-box p + p { margin-top:15px; }
+    .vision-section { background:linear-gradient(120deg, #4b1111, #7c201d); color:#fff; padding:78px 28px; }
+    .vision-wrap { display:grid; gap:22px; grid-template-columns:repeat(2, minmax(0, 1fr)); margin:auto; max-width:1120px; }
+    .vision-card { background:rgba(255,255,255,.08); border:1px solid rgba(244,220,166,.48); border-radius:14px; padding:32px; }
+    .vision-card h3 { color:var(--gold-light); font-size:23px; margin-bottom:12px; }
+    .vision-card p { line-height:1.9; }
     .card-grid, .teacher-grid, .gallery-grid, .contact-grid { display:grid; gap:20px; }
     .card-grid { grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); }
     .card { border-radius:14px; min-height:210px; padding:28px 22px; text-align:center; transition:.25s ease; }
@@ -78,8 +90,24 @@
     .position { color:#a36d1a; font-weight:700; margin-bottom:6px; }
     .teacher-card p:last-child { color:var(--muted); font-size:14px; }
     .notice-placeholder, .gallery-item { align-items:center; background:#fffaf1; border:1px dashed #cfa968; border-radius:12px; color:#725941; display:flex; justify-content:center; padding:30px; text-align:center; }
+    .notice-placeholder { background:linear-gradient(135deg, #fffaf1, #f5e8cf); border:1px solid #dfc089; box-shadow:var(--shadow); min-height:180px; }
+    .notice-placeholder h3 { color:var(--maroon); font-size:24px; margin-bottom:8px; }
     .gallery-grid { grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); }
-    .gallery-item { background:linear-gradient(135deg, #f5ead6, #fffdf8); min-height:185px; }
+    .gallery-item { background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 20px rgba(71,39,15,.10); cursor:pointer; display:block; min-height:0; overflow:hidden; padding:0; text-align:left; transition:.25s ease; }
+    .gallery-item:hover { box-shadow:0 16px 30px rgba(71,39,15,.16); transform:translateY(-4px); }
+    .gallery-item img { display:block; height:220px; object-fit:cover; width:100%; }
+    .gallery-item figcaption { background:#fff; color:var(--maroon); font-size:14px; font-weight:700; padding:12px 14px; }
+    .gallery-item:has(img[src="images/gallery-presentation.jpg"]), .gallery-item:has(img[src="images/gallery-student-group.jpg"]) { display:none; }
+    .lightbox { align-items:center; background:rgba(18,10,8,.93); display:none; inset:0; justify-content:center; padding:28px; position:fixed; z-index:50; }
+    .lightbox.is-open { display:flex; }
+    .lightbox-panel { align-items:center; display:flex; flex-direction:column; max-height:100%; max-width:min(1100px, 100%); position:relative; }
+    .lightbox-image { border:2px solid rgba(244,220,166,.8); border-radius:10px; box-shadow:0 20px 55px rgba(0,0,0,.55); max-height:calc(100vh - 145px); max-width:100%; object-fit:contain; }
+    .lightbox-caption { color:#fff; font-size:16px; font-weight:700; margin-top:13px; text-align:center; }
+    .lightbox-control { align-items:center; background:#fff; border:0; border-radius:50%; box-shadow:0 5px 16px rgba(0,0,0,.28); color:var(--maroon); cursor:pointer; display:flex; font-size:28px; font-weight:700; height:46px; justify-content:center; line-height:1; position:absolute; width:46px; }
+    .lightbox-close { right:-10px; top:-12px; }
+    .lightbox-prev, .lightbox-next { top:50%; transform:translateY(-50%); }
+    .lightbox-prev { left:-68px; }
+    .lightbox-next { right:-68px; }
     .download-card { border-radius:14px; padding:25px; text-align:center; }
     .download-button { background:var(--maroon); color:#fff; font-size:14px; margin-top:12px; padding:8px 18px; }
     .contact-grid { grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); }
@@ -92,8 +120,37 @@
     footer p { font-size:14px; opacity:.84; }
     .footer-line { background:var(--gold); height:2px; margin:15px auto; width:65px; }
     @media (max-width:960px) { .header-inner { flex-direction:column; gap:10px; } .header-controls { align-items:center; } nav { justify-content:center; } }
-    @media (max-width:760px) { .section { padding:64px 20px; } .director-section { padding:65px 20px; } .director-card, .principal-card { flex-direction:column; gap:18px; padding:25px; text-align:center; } .director-photo-wrap { flex:none; max-width:380px; width:100%; } .director-info h3 { font-size:21px; } }
-    @media (max-width:500px) { .header-inner { padding:10px 15px; } .brand h1 { font-size:18px; } .brand img { height:55px; width:55px; } nav { gap:0; } nav a { font-size:12px; padding:5px 7px; } .hero { min-height:520px; padding:58px 18px; } .hero-logo { height:115px; width:115px; } .about-box { padding:26px 23px; } .director-card { padding:20px; } }
+    @media (max-width:760px) { .section { padding:64px 20px; } .director-section { padding:65px 20px; } .director-card, .principal-card { flex-direction:column; gap:18px; padding:25px; text-align:center; } .director-photo-wrap { flex:none; max-width:380px; width:100%; } .director-info h3 { font-size:21px; } .vision-section { padding:58px 20px; } .vision-wrap { grid-template-columns:1fr; } }
+    @media (max-width:500px) { .header-inner { padding:10px 15px; } .brand h1 { font-size:18px; } .brand img { height:55px; width:55px; } nav { gap:0; } nav a { font-size:12px; padding:5px 7px; } .hero { min-height:520px; padding:58px 18px; } .hero-logo { height:115px; width:115px; } .about-box { padding:26px 23px; } .director-card { padding:20px; } .lightbox { padding:18px; } .lightbox-control { height:40px; width:40px; } .lightbox-prev { left:8px; } .lightbox-next { right:8px; } .lightbox-close { right:0; top:-8px; } }
+
+    /* Refined visual system: a calmer, more contemporary institutional presentation. */
+    body { letter-spacing:.005em; }
+    header { backdrop-filter:blur(14px); }
+    .brand h1, .hero h2, .section-title, .director-heading h2, .director-info h3, .principal-card h3 { font-weight:800; letter-spacing:-.015em; }
+    nav a { font-family:Manrope, "Noto Sans Sinhala", sans-serif; font-weight:600; }
+    .language-switcher { box-shadow:0 3px 10px rgba(68,37,16,.08); }
+    .hero { min-height:680px; background-image:linear-gradient(120deg, rgba(42,7,8,.95) 5%, rgba(92,18,20,.75) 50%, rgba(36,10,10,.58)), url("images/hero-banner.png"); }
+    .hero-content { animation:hero-rise .8s ease-out both; }
+    .hero-kicker { font-family:Manrope, "Noto Sans Sinhala", sans-serif; font-weight:700; max-width:800px; }
+    .hero h2 { text-wrap:balance; }
+    .hero-button, .download-button { border:1px solid rgba(255,255,255,.25); box-shadow:0 8px 20px rgba(0,0,0,.12); }
+    .section { padding-bottom:96px; padding-top:96px; }
+    .section-title { text-wrap:balance; }
+    .section-divider { border-radius:999px; }
+    .about-box, .card, .teacher-card, .download-card, .contact-card, .director-card, .principal-card { border-radius:18px; }
+    .about-box { border-left-width:5px; }
+    .card, .teacher-card, .contact-card, .gallery-item { transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+    .card:hover, .teacher-card:hover, .contact-card:hover, .gallery-item:hover { transform:translateY(-6px); }
+    .vision-section { background:radial-gradient(circle at top right, rgba(226,174,77,.24), transparent 32%), linear-gradient(120deg, #3d0c0e, #781d22 65%, #4d1115); }
+    .vision-card { border-radius:18px; }
+    .director-section { background:linear-gradient(135deg, #f7eedf, #fffdfa 55%, #ead9bb); }
+    .gallery-item img { transition:transform .45s ease; }
+    .gallery-item:hover img { transform:scale(1.05); }
+    .gallery-item figcaption { padding:15px 16px; }
+    footer { background:radial-gradient(circle at top, #8c2b29, transparent 48%), linear-gradient(115deg, var(--maroon-dark), var(--maroon)); }
+    @keyframes hero-rise { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    @media (prefers-reduced-motion:reduce) { *, *::before, *::after { animation-duration:.01ms !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } }
+    @media (max-width:760px) { .hero { min-height:590px; } .section { padding-bottom:70px; padding-top:70px; } }
   </style>
 </head>
 <body>
@@ -101,12 +158,12 @@
     <div class="header-inner">
       <div class="brand">
         <img src="images/logo.jpg" alt="කෑ/විද්‍යානිවාස මහ පිරිවෙන ලාංඡනය" data-alt-si="කෑ/විද්‍යානිවාස මහ පිරිවෙන ලාංඡනය" data-alt-en="Kä/Vidyanivasa Maha Pirivena logo">
-        <div><h1 data-si="කෑ/විද්‍යානිවාස මහ පිරිවෙන" data-en="Kä/Vidyanivasa Maha Pirivena">කෑ/විද්‍යානිවාස මහ පිරිවෙන</h1><p data-si="දික්කොහුපිටිය, හෙට්ටිමුල්ල, ඇකිරියගල" data-en="Dikkohupitiya, Hettimulla, Akiriyagala">දික්කොහුපිටිය, හෙට්ටිමුල්ල, ඇකිරියගල</p></div>
+        <div><h1 data-si="කෑ/විද්‍යානිවාස මහ පිරිවෙන" data-en="Kä/Vidyanivasa Maha Pirivena">කෑ/විද්‍යානිවාස මහ පිරිවෙන</h1><p data-si="ඇකිරියගල, දික්කොහුපිටිය, හෙට්ටිමුල්ල" data-en="Ekiriyagala, Dikkohupitiya, Hettimulla">ඇකිරියගල, දික්කොහුපිටිය, හෙට්ටිමුල්ල</p></div>
       </div>
       <div class="header-controls">
         <div class="language-switcher" aria-label="Language selector"><button type="button" class="active" data-language="si">සිංහල</button><button type="button" data-language="en">English</button></div>
         <nav aria-label="Main navigation">
-          <a href="#home" data-si="මුල් පිටුව" data-en="Home">මුල් පිටුව</a><a href="#about" data-si="අපේ පිරිවෙන" data-en="Our Pirivena">අපේ පිරිවෙන</a><a href="#education" data-si="අධ්‍යාපනය" data-en="Education">අධ්‍යාපනය</a><a href="#pirivenadhipathi" data-si="පරිවේණාධිපති" data-en="Pirivenadhipathi">පරිවේණාධිපති</a><a href="#teachers" data-si="ගුරු මණ්ඩලය" data-en="Teaching Staff">ගුරු මණ්ඩලය</a><a href="#notices" data-si="නිවේදන" data-en="Notices">නිවේදන</a><a href="#gallery" data-si="ගැලරිය" data-en="Gallery">ගැලරිය</a><a href="#downloads" data-si="බාගත කිරීම්" data-en="Downloads">බාගත කිරීම්</a><a href="#contact" data-si="සම්බන්ධ වන්න" data-en="Contact">සම්බන්ධ වන්න</a>
+          <a class="menu-home" href="#home" data-si="මුල් පිටුව" data-en="Home">මුල් පිටුව</a><a class="menu-about" href="#about" data-si="අපේ පිරිවෙන" data-en="Our Pirivena">අපේ පිරිවෙන</a><a class="menu-education" href="#education" data-si="අධ්‍යාපනය" data-en="Education">අධ්‍යාපනය</a><a class="menu-principal" href="#pirivenadhipathi" data-si="පරිවේණාධිපති" data-en="Principal">පරිවේණාධිපති</a><a class="menu-teachers" href="#teachers" data-si="ගුරු මණ්ඩලය" data-en="Teaching Staff">ගුරු මණ්ඩලය</a><a class="menu-notices" href="#notices" data-si="නිවේදන" data-en="Notices">නිවේදන</a><a class="menu-gallery" href="#gallery" data-si="ගැලරිය" data-en="Gallery">ගැලරිය</a><a class="menu-downloads" href="#downloads" data-si="බාගත කිරීම්" data-en="Downloads">බාගත කිරීම්</a><a class="menu-contact" href="#contact" data-si="සම්බන්ධ වන්න" data-en="Contact">සම්බන්ධ වන්න</a>
         </nav>
       </div>
     </div>
@@ -114,7 +171,9 @@
 
   <section id="home" class="hero">
     <div class="hero-content">
+      <p class="hero-kicker" data-si="විද්‍යානිවාස මහ පිරිවෙනේ නිල වෙබ් අඩවිය වෙත සාදරයෙන් පිළිගනිමු" data-en="Welcome to the Official Website of VIDYANIWASA MAHA PIRIVENA">විද්‍යානිවාස මහ පිරිවෙනේ නිල වෙබ් අඩවිය වෙත සාදරයෙන් පිළිගනිමු</p>
       <img src="images/logo.jpg" alt="පිරිවෙනේ ලාංඡනය" data-alt-si="පිරිවෙනේ ලාංඡනය" data-alt-en="Pirivena logo" class="hero-logo">
+      <div class="hero-year-badge"><span data-si="ආරම්භය" data-en="Established">ආරම්භය</span><strong>1941</strong></div>
       <h2 data-si="කෑ/විද්‍යානිවාස මහ පිරිවෙන" data-en="Kä/Vidyanivasa Maha Pirivena">කෑ/විද්‍යානිවාස මහ පිරිවෙන</h2>
       <p class="hero-tagline" data-si="ත්‍රිවිධ ශාසනය සුරකිමින්, අනාගත ලෝකයේ අභියෝග ජය ගත හැකි ප්‍රජාවක් බිහි කිරීම" data-en="Safeguarding the Threefold Buddhist Dispensation and nurturing a community capable of overcoming the challenges of the future world.">ත්‍රිවිධ ශාසනය සුරකිමින්, අනාගත ලෝකයේ අභියෝග ජය ගත හැකි ප්‍රජාවක් බිහි කිරීම</p>
       <a href="#about" class="hero-button" data-si="අපේ පිරිවෙන ගැන" data-en="About Our Pirivena">අපේ පිරිවෙන ගැන</a>
@@ -124,7 +183,23 @@
   <section id="about" class="section">
     <h2 class="section-title" data-si="🏛️ අපේ පිරිවෙන" data-en="🏛️ Our Pirivena">🏛️ අපේ පිරිවෙන</h2><div class="section-divider"></div>
     <p class="lead" data-si="කෑ/විද්‍යානිවාස මහ පිරිවෙනේ අධ්‍යාපනික, ආගමික හා සංස්කෘතික කටයුතු පිළිබඳ තොරතුරු." data-en="Information about the educational, religious and cultural work of Kä/Vidyanivasa Maha Pirivena.">කෑ/විද්‍යානිවාස මහ පිරිවෙනේ අධ්‍යාපනික, ආගමික හා සංස්කෘතික කටයුතු පිළිබඳ තොරතුරු.</p>
-    <div class="about-box"><p><strong data-si="පිරිවෙනේ ඉතිහාසය හා විස්තර" data-en="History and information about the Pirivena">පිරිවෙනේ ඉතිහාසය හා විස්තර</strong></p><p data-si="මෙම කොටස සඳහා පිරිවෙනේ නිල ඉතිහාසය, ආරම්භය, සංවර්ධනය සහ වැදගත් තොරතුරු පසුව ඇතුළත් කිරීමට නියමිතය." data-en="The official history, founding, development and important information about the Pirivena will be added here later.">මෙම කොටස සඳහා පිරිවෙනේ නිල ඉතිහාසය, ආරම්භය, සංවර්ධනය සහ වැදගත් තොරතුරු පසුව ඇතුළත් කිරීමට නියමිතය.</p><p data-si="අපගේ අරමුණ වන්නේ පිරිවෙන් අධ්‍යාපනය, බෞද්ධ සංස්කෘතිය හා නවීන තාක්ෂණය එකට සම්බන්ධ කරමින් ගුණාත්මක අධ්‍යාපන පරිසරයක් පවත්වාගෙන යාමයි." data-en="Our aim is to maintain a quality learning environment by connecting Pirivena education, Buddhist culture and modern technology.">අපගේ අරමුණ වන්නේ පිරිවෙන් අධ්‍යාපනය, බෞද්ධ සංස්කෘතිය හා නවීන තාක්ෂණය එකට සම්බන්ධ කරමින් ගුණාත්මක අධ්‍යාපන පරිසරයක් පවත්වාගෙන යාමයි.</p></div>
+    <div class="about-box"><p><strong data-si="පිරිවෙනේ ඉතිහාසය හා විස්තර" data-en="History and information about the Pirivena">පිරිවෙනේ ඉතිහාසය හා විස්තර</strong></p><p data-si="කෑ/විද්‍යානිවාස මහ පිරිවෙන 1941 වර්ෂයේ ආරම්භ කරන ලදී." data-en="Kä/Vidyanivasa Maha Pirivena was established in 1941.">කෑ/විද්‍යානිවාස මහ පිරිවෙන 1941 වර්ෂයේ ආරම්භ කරන ලදී.</p><p data-si="අපගේ අරමුණ වන්නේ පිරිවෙන් අධ්‍යාපනය, බෞද්ධ සංස්කෘතිය හා නවීන තාක්ෂණය එකට සම්බන්ධ කරමින් ගුණාත්මක අධ්‍යාපන පරිසරයක් පවත්වාගෙන යාමයි." data-en="Our aim is to maintain a quality learning environment by connecting Pirivena education, Buddhist culture and modern technology.">අපගේ අරමුණ වන්නේ පිරිවෙන් අධ්‍යාපනය, බෞද්ධ සංස්කෘතිය හා නවීන තාක්ෂණය එකට සම්බන්ධ කරමින් ගුණාත්මක අධ්‍යාපන පරිසරයක් පවත්වාගෙන යාමයි.</p></div>
+  </section>
+
+  <section id="history" class="section">
+    <h2 class="section-title" data-si="📜 ඉතිහාසය" data-en="📜 Our History">📜 ඉතිහාසය</h2><div class="section-divider"></div>
+    <div class="about-box">
+      <p data-si="චෙල්ලප්පා නම් හෙට්ටි මිනිසෙකුට උකස් කර තිබූ දික්කොහුපිටියේ ආවස භූමිය තම ධනයෙන් බේරාගත් කොස්සින්නේ කෝරලයේ මහතා හීල්බත්දේනියේ පියුන් අප්පු හාමී, තිබ්බුටුමුණුව ආරච්චිලාගේ උපාසක රාළ, පල්ලේගම උපාසක රාළ, ළිංදේනියේ උපාසක රාළ, කොස්සින්නේ ඩිංගිරාළ සහ වේකොලදේනියේ විදානේ සමග කරඩුපනට ගොස් ආරාධනා කළහ. එම ආරාධනාවට අනුව වෙලිගමුවේ අත්තදාස්සී හා නාපානේ ශ්‍රී සුමන යන යතිද්‍රයාණන් වහන්සේලා දෙනම ඇතුළු භික්ෂූන් වහන්සේලා සත් නමක් ක්‍රි.ව. 1886 ජූලි 5 වන දින දික්කොහුපිටිය ආවසයට වැඩමකොට වස් විසූහ." data-en="The Dikkohupitiya temple land, which had been mortgaged to a Hetti man named Chellappa, was redeemed with his own funds by Piyun Appu Hami of Heelbathdeniya in the Kossinna Korale. Together with Thibbutumunuwa Arachchilage Upasaka Rala, Pallegama Upasaka Rala, Lindeniya Upasaka Rala, Kossinna Dingirala and Wekoladeniya Vidane, he went to Karadupana to extend an invitation. In response, seven monks, including Veligamuwa Atthadassi and Napane Sri Sumana, arrived at the Dikkohupitiya temple and observed the rains retreat on 5 July 1886.">චෙල්ලප්පා නම් හෙට්ටි මිනිසෙකුට උකස් කර තිබූ දික්කොහුපිටියේ ආවස භූමිය තම ධනයෙන් බේරාගත් කොස්සින්නේ කෝරලයේ මහතා හීල්බත්දේනියේ පියුන් අප්පු හාමී, තිබ්බුටුමුණුව ආරච්චිලාගේ උපාසක රාළ, පල්ලේගම උපාසක රාළ, ළිංදේනියේ උපාසක රාළ, කොස්සින්නේ ඩිංගිරාළ සහ වේකොලදේනියේ විදානේ සමග කරඩුපනට ගොස් ආරාධනා කළහ. එම ආරාධනාවට අනුව වෙලිගමුවේ අත්තදාස්සී හා නාපානේ ශ්‍රී සුමන යන යතිද්‍රයාණන් වහන්සේලා දෙනම ඇතුළු භික්ෂූන් වහන්සේලා සත් නමක් ක්‍රි.ව. 1886 ජූලි 5 වන දින දික්කොහුපිටිය ආවසයට වැඩමකොට වස් විසූහ.</p>
+      <p data-si="ඉන් අනතුරුව 1910 දී පමණ වැඩමකොට වදාළ කටුගස්තොට ශ්‍රී සුමන තිස්ස මාහිමියන් වහන්සේගේ සම්ප්‍රාප්තියත් සමග දික්කොහුපිටිය ආවසය බෝධි අංගනාරාමය යන නමින් ප්‍රසිද්ධ විය. අනේකවිධ දුෂ්කරතා මැද බෝධි අංගනාරාමය භෞතික වශයෙන් දියුණු කළ උන්වහන්සේ, ශාසනයේ උන්නතිය උදෙසා ප්‍රතිපත්තිදර සිසු පරපුරක් සමාජයට දායාද කළහ. ශ්‍රී ලංකා රාමඤ්ඤ මහා නිකායේ මහෝපාධ්‍යාය උඩ කරඬුපනේ සුගුණපාල ස්වාමීන්ද්‍රයන් වහන්සේ එම ශිෂ්‍ය පරම්පරාවේ ජ්‍යෙෂ්ඨයාණෝය." data-en="Around 1910, with the arrival of Venerable Katugastota Sri Sumana Tissa, the Dikkohupitiya temple became known as Bodhi Anganarama. Amid many hardships, he developed Bodhi Anganarama materially and gifted society a generation of disciplined pupils for the advancement of the Sasana. Venerable Uda Karadupana Sugunapala, Mahopadhyaya of the Sri Lanka Ramanna Maha Nikaya, was the senior member of that lineage of pupils.">ඉන් අනතුරුව 1910 දී පමණ වැඩමකොට වදාළ කටුගස්තොට ශ්‍රී සුමන තිස්ස මාහිමියන් වහන්සේගේ සම්ප්‍රාප්තියත් සමග දික්කොහුපිටිය ආවසය බෝධි අංගනාරාමය යන නමින් ප්‍රසිද්ධ විය. අනේකවිධ දුෂ්කරතා මැද බෝධි අංගනාරාමය භෞතික වශයෙන් දියුණු කළ උන්වහන්සේ, ශාසනයේ උන්නතිය උදෙසා ප්‍රතිපත්තිදර සිසු පරපුරක් සමාජයට දායාද කළහ. ශ්‍රී ලංකා රාමඤ්ඤ මහා නිකායේ මහෝපාධ්‍යාය උඩ කරඬුපනේ සුගුණපාල ස්වාමීන්ද්‍රයන් වහන්සේ එම ශිෂ්‍ය පරම්පරාවේ ජ්‍යෙෂ්ඨයාණෝය.</p>
+      <p data-si="උන්වහන්සේගේ මූලික මැදිහත්වීමෙන් 1941 දී බෝධි අංගනාරාමයට අනුයුක්ත විද්‍යානිවාස පිරිවෙන නමින් භික්ෂු අධ්‍යාපන ආයතනයක් ස්ථාපිත කළහ. අද වර්තමානය වන විට කෑ/විද්‍යානිවාස මහ පිරිවෙන තුළින් අධ්‍යාපනය මෙන්ම විනය ශික්ෂණය ලබා දහස් ගණනකට අධික ශිෂ්‍ය භික්ෂූන් වහන්සේලා සහ ශිෂ්‍ය දරුවන් දේශීය මෙන්ම විදේශීය ධර්ම ප්‍රචාර හා සමාජීය කටයුතුවල නිරත වෙමින් සිටිති." data-en="Through his primary intervention, a monastic educational institution named Vidyanivasa Pirivena, attached to Bodhi Anganarama, was established in 1941. Today, through Kä/Vidyanivasa Maha Pirivena, more than thousands of student monks and students receive education and disciplinary training and engage in Dhamma propagation and social service in Sri Lanka and abroad.">උන්වහන්සේගේ මූලික මැදිහත්වීමෙන් 1941 දී බෝධි අංගනාරාමයට අනුයුක්ත විද්‍යානිවාස පිරිවෙන නමින් භික්ෂු අධ්‍යාපන ආයතනයක් ස්ථාපිත කළහ. අද වර්තමානය වන විට කෑ/විද්‍යානිවාස මහ පිරිවෙන තුළින් අධ්‍යාපනය මෙන්ම විනය ශික්ෂණය ලබා දහස් ගණනකට අධික ශිෂ්‍ය භික්ෂූන් වහන්සේලා සහ ශිෂ්‍ය දරුවන් දේශීය මෙන්ම විදේශීය ධර්ම ප්‍රචාර හා සමාජීය කටයුතුවල නිරත වෙමින් සිටිති.</p>
+    </div>
+  </section>
+
+  <section class="vision-section">
+    <div class="vision-wrap">
+      <article class="vision-card"><h3 data-si="අපේ දැක්ම" data-en="Our Vision">අපේ දැක්ම</h3><p data-si="ත්‍රිවිධ ශාසනය සුරකිමින්, අනාගත ලෝකයේ අභියෝග ජය ගත හැකි ප්‍රජාවක් බිහි කිරීම." data-en="Safeguarding the Threefold Buddhist Dispensation and nurturing a community capable of overcoming the challenges of the future world.">ත්‍රිවිධ ශාසනය සුරකිමින්, අනාගත ලෝකයේ අභියෝග ජය ගත හැකි ප්‍රජාවක් බිහි කිරීම.</p></article>
+      <article class="vision-card"><h3 data-si="අපේ මෙහෙවර" data-en="Our Mission">අපේ මෙහෙවර</h3><p data-si="පිරිවෙන් අධ්‍යාපනය, බෞද්ධ සංස්කෘතිය හා නවීන තාක්ෂණය එකට සම්බන්ධ කරමින් ගුණාත්මක අධ්‍යාපන පරිසරයක් පවත්වාගෙන යාම." data-en="Maintaining a quality learning environment by connecting Pirivena education, Buddhist culture and modern technology.">පිරිවෙන් අධ්‍යාපනය, බෞද්ධ සංස්කෘතිය හා නවීන තාක්ෂණය එකට සම්බන්ධ කරමින් ගුණාත්මක අධ්‍යාපන පරිසරයක් පවත්වාගෙන යාම.</p></article>
+    </div>
   </section>
 
   <section id="education" class="section">
@@ -149,9 +224,9 @@
 
   <section id="pirivenadhipathi" class="principal-section">
     <div class="section">
-      <h2 class="section-title" data-si="🏛️ පරිවේණාධිපති හිමි" data-en="🏛️ Pirivenadhipathi">🏛️ පරිවේණාධිපති හිමි</h2>
+      <h2 class="section-title" data-si="🏛️ පරිවේණාධිපති හිමි" data-en="🏛️ Principal">🏛️ පරිවේණාධිපති හිමි</h2>
       <div class="section-divider"></div>
-      <div class="principal-card"><div class="principal-photo-wrap"><img src="images/pirivenadhipathi.jpg" alt="පූජ්‍ය මාඑළියේ විජිත නා හිමි" data-alt-si="පූජ්‍ය මාඑළියේ විජිත නා හිමි" data-alt-en="Venerable Maeliyē Vijitha Nā Thero" class="principal-photo"></div><div><h3 data-si="පූජ්‍ය මාඑළියේ විජිත නා හිමි" data-en="Venerable Maeliyē Vijitha Nā Thero">පූජ්‍ය මාඑළියේ විජිත නා හිමි</h3><p class="position" data-si="පරිවේණාධිපති" data-en="Pirivenadhipathi">පරිවේණාධිපති</p><p data-si="පිරිවෙනේ සියලුම අධ්‍යයන, අනධ්‍යයන හා පරිපාලන කටයුතු සඳහා නායකත්වය ලබාදෙයි." data-en="Provides leadership for all academic, non-academic and administrative activities of the Pirivena.">පිරිවෙනේ සියලුම අධ්‍යයන, අනධ්‍යයන හා පරිපාලන කටයුතු සඳහා නායකත්වය ලබාදෙයි.</p></div></div>
+      <div class="principal-card"><div class="principal-photo-wrap"><img src="images/pirivenadhipathi.jpg" alt="පූජ්‍ය මාඑළියේ විජිත නා හිමි" data-alt-si="පූජ්‍ය මාඑළියේ විජිත නා හිමි" data-alt-en="Venerable Maeliyē Vijitha Nā Thero" class="principal-photo"></div><div><h3 data-si="පූජ්‍ය මාඑළියේ විජිත නා හිමි" data-en="Venerable Maeliyē Vijitha Nā Thero">පූජ්‍ය මාඑළියේ විජිත නා හිමි</h3><p class="position" data-si="පරිවේණාධිපති" data-en="Principal">පරිවේණාධිපති</p><p data-si="පිරිවෙනේ සියලුම අධ්‍යයන, අනධ්‍යයන හා පරිපාලන කටයුතු සඳහා නායකත්වය ලබාදෙයි." data-en="Provides leadership for all academic, non-academic and administrative activities of the Pirivena.">පිරිවෙනේ සියලුම අධ්‍යයන, අනධ්‍යයන හා පරිපාලන කටයුතු සඳහා නායකත්වය ලබාදෙයි.</p></div></div>
     </div>
   </section>
 
@@ -170,23 +245,38 @@
 
   <section id="notices" class="section"><h2 class="section-title" data-si="📢 නවතම නිවේදන" data-en="📢 Latest Notices">📢 නවතම නිවේදන</h2><div class="section-divider"></div><div class="notice-placeholder"><div><h3 data-si="පිරිවෙන් නිවේදන" data-en="Pirivena Notices">පිරිවෙන් නිවේදන</h3><p data-si="නවතම නිවේදන, වැඩසටහන් සහ වැදගත් දැනුම්දීම් මෙහි පළ කරනු ලැබේ." data-en="Latest notices, programmes and important announcements will be published here.">නවතම නිවේදන, වැඩසටහන් සහ වැදගත් දැනුම්දීම් මෙහි පළ කරනු ලැබේ.</p></div></div></section>
 
-  <section id="gallery" class="section"><h2 class="section-title" data-si="🖼️ ඡායාරූප ගැලරිය" data-en="🖼️ Photo Gallery">🖼️ ඡායාරූප ගැලරිය</h2><div class="section-divider"></div><p class="lead" data-si="පිරිවෙනේ වැඩසටහන්, උත්සව සහ අනෙකුත් අවස්ථාවල ඡායාරූප මෙහි ඇතුළත් කරමු." data-en="Photos from Pirivena programmes, ceremonies and other occasions will be included here.">පිරිවෙනේ වැඩසටහන්, උත්සව සහ අනෙකුත් අවස්ථාවල ඡායාරූප මෙහි ඇතුළත් කරමු.</p><div class="gallery-grid"><div class="gallery-item" data-si="📷<br>පිරිවෙන් අවස්ථා<br>ඡායාරූප පසුව එකතු කරමු." data-en="📷<br>Pirivena Events<br>Photos will be added later.">📷<br>පිරිවෙන් අවස්ථා<br>ඡායාරූප පසුව එකතු කරමු.</div><div class="gallery-item" data-si="🏫<br>පිරිවෙන් පරිශ්‍රය<br>ඡායාරූප පසුව එකතු කරමු." data-en="🏫<br>Pirivena Premises<br>Photos will be added later.">🏫<br>පිරිවෙන් පරිශ්‍රය<br>ඡායාරූප පසුව එකතු කරමු.</div><div class="gallery-item" data-si="🙏<br>ආගමික වැඩසටහන්<br>ඡායාරූප පසුව එකතු කරමු." data-en="🙏<br>Religious Programmes<br>Photos will be added later.">🙏<br>ආගමික වැඩසටහන්<br>ඡායාරූප පසුව එකතු කරමු.</div></div></section>
+  <section id="gallery" class="section"><h2 class="section-title" data-si="🖼️ ඡායාරූප ගැලරිය" data-en="🖼️ Photo Gallery">🖼️ ඡායාරූප ගැලරිය</h2><div class="section-divider"></div><p class="lead" data-si="පිරිවෙනේ අධ්‍යාපනික, ආගමික හා සමාජීය අවස්ථාවල ඡායාරූප." data-en="Photos from the educational, religious and community occasions of the Pirivena.">පිරිවෙනේ අධ්‍යාපනික, ආගමික හා සමාජීය අවස්ථාවල ඡායාරූප.</p><div class="gallery-grid"><figure class="gallery-item"><img src="images/gallery-learning-community.jpg" alt="පිරිවෙනේ අධ්‍යාපනික වැඩසටහන" data-alt-si="පිරිවෙනේ අධ්‍යාපනික වැඩසටහන" data-alt-en="Pirivena educational programme"><figcaption data-si="අධ්‍යාපනික වැඩසටහන්" data-en="Educational Programmes">අධ්‍යාපනික වැඩසටහන්</figcaption></figure><figure class="gallery-item"><img src="images/gallery-dhamma-session.jpg" alt="ධර්ම දේශනා හා ඉගෙනුම් අවස්ථාව" data-alt-si="ධර්ම දේශනා හා ඉගෙනුම් අවස්ථාව" data-alt-en="Dhamma teaching and learning session"><figcaption data-si="ධර්ම හා ඉගෙනුම් අවස්ථා" data-en="Dhamma and Learning Sessions">ධර්ම හා ඉගෙනුම් අවස්ථා</figcaption></figure><figure class="gallery-item"><img src="images/gallery-classroom.jpg" alt="පිරිවෙනේ පන්ති කාමරය" data-alt-si="පිරිවෙනේ පන්ති කාමරය" data-alt-en="Pirivena classroom"><figcaption data-si="පිරිවෙනේ පන්ති කාමරය" data-en="Pirivena Classroom">පිරිවෙනේ පන්ති කාමරය</figcaption></figure><figure class="gallery-item"><img src="images/gallery-presentation.jpg" alt="පොඩි හාමුදුරුවන්ගේ වැඩසටහන" data-alt-si="පොඩි හාමුදුරුවන්ගේ වැඩසටහන" data-alt-en="Young monks' programme"><figcaption data-si="පොඩි හාමුදුරුවන්ගේ වැඩසටහන්" data-en="Young Monks' Programmes">පොඩි හාමුදුරුවන්ගේ වැඩසටහන්</figcaption></figure><figure class="gallery-item"><img src="images/gallery-student-group.jpg" alt="පොඩි හාමුදුරුවන්ගේ සමූහ ඡායාරූපය" data-alt-si="පොඩි හාමුදුරුවන්ගේ සමූහ ඡායාරූපය" data-alt-en="Young monks' group photograph"><figcaption data-si="පිරිවෙනේ ශිෂ්‍ය පිරිස" data-en="Pirivena Student Community">පිරිවෙනේ ශිෂ්‍ය පිරිස</figcaption></figure><figure class="gallery-item"><img src="images/gallery-pirivena-community.jpg" alt="පිරිවෙනේ සමූහ අවස්ථාව" data-alt-si="පිරිවෙනේ සමූහ අවස්ථාව" data-alt-en="Pirivena community gathering"><figcaption data-si="පිරිවෙනේ සමූහ අවස්ථාව" data-en="Pirivena Community Gathering">පිරිවෙනේ සමූහ අවස්ථාව</figcaption></figure></div></section>
 
   <section id="downloads" class="section"><h2 class="section-title" data-si="📄 බාගත කිරීම්" data-en="📄 Downloads">📄 බාගත කිරීම්</h2><div class="section-divider"></div><p class="lead" data-si="පිරිවෙනට අදාළ PDF ලේඛන, අයදුම්පත් සහ අනෙකුත් ලේඛන." data-en="PDF documents, application forms and other records related to the Pirivena.">පිරිවෙනට අදාළ PDF ලේඛන, අයදුම්පත් සහ අනෙකුත් ලේඛන.</p><div class="card-grid"><article class="download-card"><h3 data-si="නිවේදන" data-en="Notices">නිවේදන</h3><p data-si="නිල නිවේදන පසුව මෙහි බාගත කළ හැක." data-en="Official notices can be downloaded here later.">නිල නිවේදන පසුව මෙහි බාගත කළ හැක.</p><span class="download-button" data-si="ඉක්මනින්" data-en="Coming soon">ඉක්මනින්</span></article><article class="download-card"><h3 data-si="අයදුම්පත්" data-en="Application Forms">අයදුම්පත්</h3><p data-si="අවශ්‍ය අයදුම්පත් පසුව එකතු කරමු." data-en="Required application forms will be added later.">අවශ්‍ය අයදුම්පත් පසුව එකතු කරමු.</p><span class="download-button" data-si="ඉක්මනින්" data-en="Coming soon">ඉක්මනින්</span></article><article class="download-card"><h3 data-si="අධ්‍යාපනික ලේඛන" data-en="Educational Documents">අධ්‍යාපනික ලේඛන</h3><p data-si="අධ්‍යාපනික PDF ලේඛන පසුව එක් කෙරේ." data-en="Educational PDF documents will be added later.">අධ්‍යාපනික PDF ලේඛන පසුව එක් කෙරේ.</p><span class="download-button" data-si="ඉක්මනින්" data-en="Coming soon">ඉක්මනින්</span></article></div></section>
 
-  <section id="contact" class="section"><h2 class="section-title" data-si="📞 සම්බන්ධ වන්න" data-en="📞 Contact Us">📞 සම්බන්ධ වන්න</h2><div class="section-divider"></div><div class="contact-grid"><article class="contact-card"><div class="icon">📍</div><h3 data-si="ලිපිනය" data-en="Address">ලිපිනය</h3><p data-si="දික්කොහුපිටිය, හෙට්ටිමුල්ල, ඇකිරියගල" data-en="Dikkohupitiya, Hettimulla, Akiriyagala">දික්කොහුපිටිය, හෙට්ටිමුල්ල, ඇකිරියගල</p><a class="map-link" href="https://maps.app.goo.gl/3viYSeiCR4h5uVd86" target="_blank" rel="noopener noreferrer" data-si="Google Maps හි බලන්න" data-en="View on Google Maps">Google Maps හි බලන්න</a></article><article class="contact-card"><div class="icon">☎️</div><h3 data-si="දුරකථනය" data-en="Telephone">දුරකථනය</h3><p><a href="tel:+94352223710">035 222 3710</a></p></article><article class="contact-card"><div class="icon">✉️</div><h3 data-si="විද්‍යුත් තැපෑල" data-en="Email">විද්‍යුත් තැපෑල</h3><p><a href="mailto:vidyaniwasamahapirivena@gmail.com">vidyaniwasamahapirivena@gmail.com</a></p></article><article class="contact-card"><div class="icon">f</div><h3>Facebook</h3><p data-si="පිරිවෙනේ නිල Facebook පිටුව" data-en="The official Facebook page of the Pirivena">පිරිවෙනේ නිල Facebook පිටුව</p><a class="map-link" href="https://www.facebook.com/profile.php?id=61594252906399&amp;mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" data-si="Facebook පිටුවට යන්න" data-en="Visit Facebook Page">Facebook පිටුවට යන්න</a></article></div></section>
+  <section id="contact" class="section"><h2 class="section-title" data-si="📞 සම්බන්ධ වන්න" data-en="📞 Contact Us">📞 සම්බන්ධ වන්න</h2><div class="section-divider"></div><div class="contact-grid"><article class="contact-card"><div class="icon">📍</div><h3 data-si="ලිපිනය" data-en="Address">ලිපිනය</h3><p data-si="ඇකිරියගල, දික්කොහුපිටිය, හෙට්ටිමුල්ල" data-en="Ekiriyagala, Dikkohupitiya, Hettimulla">ඇකිරියගල, දික්කොහුපිටිය, හෙට්ටිමුල්ල</p><a class="map-link" href="https://maps.app.goo.gl/3viYSeiCR4h5uVd86" target="_blank" rel="noopener noreferrer" data-si="Google Maps හි බලන්න" data-en="View on Google Maps">Google Maps හි බලන්න</a></article><article class="contact-card"><div class="icon">☎️</div><h3 data-si="දුරකථනය" data-en="Telephone">දුරකථනය</h3><p><a href="tel:+94352223710">035 222 3710</a></p></article><article class="contact-card"><div class="icon">✉️</div><h3 data-si="විද්‍යුත් තැපෑල" data-en="Email">විද්‍යුත් තැපෑල</h3><p><a href="mailto:vidyaniwasamahapirivena@gmail.com">vidyaniwasamahapirivena@gmail.com</a></p></article><article class="contact-card"><div class="icon">f</div><h3>Facebook</h3><p data-si="පිරිවෙනේ නිල Facebook පිටුව" data-en="The official Facebook page of the Pirivena">පිරිවෙනේ නිල Facebook පිටුව</p><a class="map-link" href="https://www.facebook.com/profile.php?id=61594252906399&amp;mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" data-si="Facebook පිටුවට යන්න" data-en="Visit Facebook Page">Facebook පිටුවට යන්න</a></article></div></section>
 
-  <footer><h3 data-si="කෑ/විද්‍යානිවාස මහ පිරිවෙන" data-en="Kä/Vidyanivasa Maha Pirivena">කෑ/විද්‍යානිවාස මහ පිරිවෙන</h3><div class="footer-line"></div><p data-si="දහම් හා අධ්‍යාපනික සේවය සඳහා කැපවී සිටිමු." data-en="Dedicated to Dhamma and educational service.">දහම් හා අධ්‍යාපනික සේවය සඳහා කැපවී සිටිමු.</p><p>© <span id="year"></span> <span data-si="සියලු හිමිකම් ඇවිරිණි." data-en="All rights reserved.">සියලු හිමිකම් ඇවිරිණි.</span></p></footer>
+  <footer><h3 data-si="කෑ/විද්‍යානිවාස මහ පිරිවෙන" data-en="Kä/Vidyanivasa Maha Pirivena">කෑ/විද්‍යානිවාස මහ පිරිවෙන</h3><div class="footer-line"></div><p data-si="ඇකිරියගල, දික්කොහුපිටිය, හෙට්ටිමුල්ල" data-en="Ekiriyagala, Dikkohupitiya, Hettimulla">ඇකිරියගල, දික්කොහුපිටිය, හෙට්ටිමුල්ල</p><p>© <span id="year"></span> <span data-si="සියලු හිමිකම් ඇවිරිණි." data-en="All rights reserved.">සියලු හිමිකම් ඇවිරිණි.</span></p></footer>
+
+  <div class="lightbox" id="gallery-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <div class="lightbox-panel">
+      <button class="lightbox-control lightbox-close" type="button" aria-label="Close">×</button>
+      <button class="lightbox-control lightbox-prev" type="button" aria-label="Previous photo">‹</button>
+      <img class="lightbox-image" id="lightbox-image" src="" alt="">
+      <button class="lightbox-control lightbox-next" type="button" aria-label="Next photo">›</button>
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
 
   <script>
     const languageButtons = document.querySelectorAll('[data-language]');
     const translatable = document.querySelectorAll('[data-si][data-en]');
     const translatableAlt = document.querySelectorAll('[data-alt-si][data-alt-en]');
+const englishPirivenaName = 'KE/Vidyaniwasa maha pirivena';
     function setLanguage(language) {
       document.documentElement.lang = language;
-      document.title = language === 'si' ? 'කෑ/විද්‍යානිවාස මහ පිරිවෙන' : 'Kä/Vidyanivasa Maha Pirivena';
+      document.title = language === 'si' ? 'කෑ/විද්‍යානිවාස මහ පිරිවෙන' : englishPirivenaName;
       translatable.forEach((element) => { element.innerHTML = element.dataset[language]; });
       translatableAlt.forEach((element) => { element.alt = element.dataset[`alt${language[0].toUpperCase()}${language.slice(1)}`]; });
+      if (language === 'en') {
+        translatable.forEach((element) => { element.innerHTML = element.innerHTML.replaceAll('Kä/Vidyanivasa Maha Pirivena', englishPirivenaName); });
+        translatableAlt.forEach((element) => { element.alt = element.alt.replaceAll('Kä/Vidyanivasa Maha Pirivena', englishPirivenaName); });
+      }
       languageButtons.forEach((button) => {
         const active = button.dataset.language === language;
         button.classList.toggle('active', active);
@@ -195,6 +285,49 @@
       localStorage.setItem('vidyanivasa-language', language);
     }
     languageButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.language)));
+    const lightbox = document.getElementById('gallery-lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const galleryItems = [...document.querySelectorAll('.gallery-item')].filter((item) => getComputedStyle(item).display !== 'none');
+    let activeGalleryIndex = 0;
+    function showGalleryImage(index) {
+      activeGalleryIndex = (index + galleryItems.length) % galleryItems.length;
+      const item = galleryItems[activeGalleryIndex];
+      const image = item.querySelector('img');
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent = item.querySelector('figcaption').textContent;
+    }
+    function openLightbox(index) {
+      showGalleryImage(index);
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      lightbox.querySelector('.lightbox-close').focus();
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    galleryItems.forEach((item, index) => {
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('role', 'button');
+      item.addEventListener('click', () => openLightbox(index));
+      item.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openLightbox(index); }
+      });
+    });
+    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.querySelector('.lightbox-prev').addEventListener('click', () => showGalleryImage(activeGalleryIndex - 1));
+    lightbox.querySelector('.lightbox-next').addEventListener('click', () => showGalleryImage(activeGalleryIndex + 1));
+    lightbox.addEventListener('click', (event) => { if (event.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (event) => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowLeft') showGalleryImage(activeGalleryIndex - 1);
+      if (event.key === 'ArrowRight') showGalleryImage(activeGalleryIndex + 1);
+    });
     document.getElementById('year').textContent = new Date().getFullYear();
     setLanguage(localStorage.getItem('vidyanivasa-language') || 'si');
   </script>
